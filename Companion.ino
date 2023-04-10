@@ -325,19 +325,19 @@ void loop() {
             clientweb.println("<div id=\"bottom\" style=\"display:none;\">");
             
             clientweb.println("<div class=\"w3-card-4  w3-khaki w3-padding-16 w3-xxxlarge w3-center\">");
-            clientweb.println("<p>Production Solaire journalière</p>");
+            clientweb.println("<p>Production Solaire</p>");
             clientweb.print(CUMPV);  // Cumul Panneaux Photovoltaiques
             clientweb.println(" kWh");
             clientweb.println("</div>");
 
             clientweb.println("<div class=\"w3-card-4  w3-amber w3-padding-16 w3-xxxlarge w3-center\">");
-            clientweb.println("<p>Recharge Cumulus journalière</p>");
+            clientweb.println("<p>Routage vers le ballon</p>");
             clientweb.print(CUMBAL);  // Valeur cumul recharge cumulus
             clientweb.println(" kWh");
             clientweb.println("</div>");
             
             clientweb.println("<div class=\"w3-card-4 w3-lime w3-padding-16 w3-xxxlarge w3-center\">");
-            clientweb.println("<p>Consommation EDF journalière</p>");
+            clientweb.println("<p>Consommation EDF</p>");
             clientweb.print(CUMCO);  // Cumul Consommation EDF
             clientweb.println(" kWh");
             clientweb.println("</div>");

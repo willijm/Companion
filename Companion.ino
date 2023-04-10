@@ -323,14 +323,7 @@ void loop() {
             clientweb.println("<button class=\"w3-bar w3-black w3-button w3-large w3-hover-white\" onclick=\"toggleBottom()\">Informations journalières</button>");
             clientweb.println("</center>");
             clientweb.println("<div id=\"bottom\" style=\"display:none;\">");
-
-
-            clientweb.println("<div class=\"w3-card-4 w3-lime w3-padding-16 w3-xxxlarge w3-center\">");
-            clientweb.println("<p>Consommation EDF journalière</p>");
-            clientweb.print(CUMCO);  // Cumul Consommation EDF
-            clientweb.println(" kWh");
-            clientweb.println("</div>");
-
+            
             clientweb.println("<div class=\"w3-card-4  w3-khaki w3-padding-16 w3-xxxlarge w3-center\">");
             clientweb.println("<p>Production Solaire journalière</p>");
             clientweb.print(CUMPV);  // Cumul Panneaux Photovoltaiques
@@ -340,6 +333,12 @@ void loop() {
             clientweb.println("<div class=\"w3-card-4  w3-amber w3-padding-16 w3-xxxlarge w3-center\">");
             clientweb.println("<p>Recharge Cumulus journalière</p>");
             clientweb.print(CUMBAL);  // Valeur cumul recharge cumulus
+            clientweb.println(" kWh");
+            clientweb.println("</div>");
+            
+            clientweb.println("<div class=\"w3-card-4 w3-lime w3-padding-16 w3-xxxlarge w3-center\">");
+            clientweb.println("<p>Consommation EDF journalière</p>");
+            clientweb.print(CUMCO);  // Cumul Consommation EDF
             clientweb.println(" kWh");
             clientweb.println("</div>");
 

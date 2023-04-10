@@ -326,25 +326,25 @@ void loop() {
             
             clientweb.println("<div class=\"w3-card-4 w3-amber w3-padding-16 w3-xxxlarge w3-center\">");
             clientweb.println("<p>Production Solaire</p>");
-            clientweb.print(CUMPV);  // Cumul Panneaux Photovoltaiques
+            clientweb.print(wh_to_kwh(CUMPV));  // Cumul Panneaux Photovoltaiques
             clientweb.println(" kWh");
             clientweb.println("</div>");
 
             clientweb.println("<div class=\"w3-card-4 w3-khaki w3-padding-16 w3-xxxlarge w3-center\">");
             clientweb.println("<p>Routage vers le ballon</p>");
-            clientweb.print(CUMBAL);  // Valeur cumul recharge cumulus
+            clientweb.print(wh_to_kwh(CUMBAL));  // Valeur cumul recharge cumulus
             clientweb.println(" kWh");
             clientweb.println("</div>");
             
             clientweb.println("<div class=\"w3-card-4 w3-lime w3-padding-16 w3-xxxlarge w3-center\">");
             clientweb.println("<p>Consommation EDF</p>");
-            clientweb.print(CUMCO);  // Cumul Consommation EDF
+            clientweb.print(wh_to_kwh(CUMCO));  // Cumul Consommation EDF
             clientweb.println(" kWh");
             clientweb.println("</div>");
 
             clientweb.println("<div class=\"w3-card-4 w3-deep-orange w3-padding-16 w3-xxxlarge w3-center\">");
             clientweb.println("<p>Réinjection sur EDF</p>");
-            clientweb.print(CUMINJ);  // Cumul injection EDF
+            clientweb.print(wh_to_kwh(CUMINJ));  // Cumul injection EDF
             clientweb.println(" kWh");
             clientweb.println("</div>");
             // <<<<<<<<<<<<<<<<<<<<<<<< Affichage des données MSunPV  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1052,6 +1052,14 @@ String strDate(time_t unixTime) {
   localDate2 += month(local_time);
   if (localDate2 == "14") wink = true;
   return localDate;
+}
+
+
+/***************************************************************************************
+**                             Conversion des wh en kwh                               **
+****************************************************************************************/
+float wh_to_kwh(float wh) {
+  return wh / 1000.0;
 }
 
 /***************************************************************************************

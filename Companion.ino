@@ -131,8 +131,7 @@ const long timeoutTime = 5000;
 ///////////////////////////////////////////////////////////////////////////////////////
 void setup() {
   Serial.println("Configuring WDT...");
-  esp_task_wdt_init(WDT_TIMEOUT, true);  //enable panic so ESP32 restarts
-  esp_task_wdt_add(NULL);                //add current thread to WDT watch
+ 
 
   // Activation du port batterie interne
   if (lipo) {

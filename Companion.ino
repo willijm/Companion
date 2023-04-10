@@ -129,11 +129,8 @@ const long timeoutTime = 5000;
 ///////////////////////////////////////////////////////////////////////////////////////
 //                                 Routine SETUP                                     //
 ///////////////////////////////////////////////////////////////////////////////////////
-void setup() {
-  Serial.println("Configuring WDT...");
- 
-
-  // Activation du port batterie interne
+void setup() { 
+ // Activation du port batterie interne
   if (lipo) {
     pinMode(15, OUTPUT);
     digitalWrite(15, 1);
